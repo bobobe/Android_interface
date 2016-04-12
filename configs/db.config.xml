@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<db>
+		<ip>localhost</ip>
+		<user>root</user>
+		<password></password>
+		<port>3306</port>
+		<dbname>taoaixin</dbname>
+	</db>
+
+	<memcache>
+	    <ip>localhost</ip>
+	    <port>11211</port>
+	</memcache>
+</config>

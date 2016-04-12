@@ -1,0 +1,15 @@
+﻿[12-Apr-2016 00:21:12 PRC] PHP Fatal error:  Cannot use object of type Response as array in C:\xampp\htdocs\taoaixin_phone\andriodinterface\controller\checkInfor.php on line 25
+[2016-04-12 12:31:26]错误级别是：E_NOTICE;在C:\xampp\htdocs\taoaixin_phone\andriodinterface\controller\recommend.php第31行存在错误;错误信息是Trying to get property of non-object。
+ 
+[2016-04-12 12:33:51]错误级别是：E_NOTICE;在C:\xampp\htdocs\taoaixin_phone\andriodinterface\controller\recommend.php第38行存在错误;错误信息是Undefined variable: data。
+ 
+[12-Apr-2016 15:23:31 PRC] PHP Fatal error:  Cannot use object of type Response as array in C:\xampp\htdocs\taoaixin_phone\andriodinterface\controller\checkInfor.php on line 25
+[12-Apr-2016 15:28:35 PRC] PHP Fatal error:  Cannot use object of type Response as array in C:\xampp\htdocs\taoaixin_phone\andriodinterface\controller\checkInfor.php on line 25
+[12-Apr-2016 15:33:17 PRC] PHP Fatal error:  Cannot use object of type Response as array in C:\xampp\htdocs\taoaixin_phone\andriodinterface\controller\checkInfor.php on line 25
+[12-Apr-2016 15:36:17 PRC] PHP Fatal error:  Cannot use object of type Response as array in C:\xampp\htdocs\taoaixin_phone\andriodinterface\controller\checkInfor.php on line 25
+[12-Apr-2016 15:37:50 PRC] PHP Fatal error:  Cannot use object of type Response as array in C:\xampp\htdocs\taoaixin_phone\andriodinterface\controller\checkInfor.php on line 25
+[12-Apr-2016 15:39:01 PRC] PHP Fatal error:  Cannot use object of type Response as array in C:\xampp\htdocs\taoaixin_phone\andriodinterface\controller\checkInfor.php on line 25
+[12-Apr-2016 15:42:40 PRC] PHP Fatal error:  Cannot use object of type Response as array in C:\xampp\htdocs\taoaixin_phone\andriodinterface\controller\checkInfor.php on line 25
+[12-Apr-2016 15:53:24 PRC] PHP Fatal error:  Cannot use object of type Response as array in C:\xampp\htdocs\taoaixin_phone\andriodinterface\controller\checkInfor.php on line 25
+[12-Apr-2016 15:56:45 PRC] PHP Fatal error:  Cannot use object of type Response as array in C:\xampp\htdocs\taoaixin_phone\andriodinterface\controller\checkInfor.php on line 25
+[12-Apr-2016 15:58:22 PRC] PHP Fatal error:  Cannot use object of type Response as array in C:\xampp\htdocs\taoaixin_phone\andriodinterface\controller\checkInfor.php on line 25
