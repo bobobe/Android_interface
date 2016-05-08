@@ -7,7 +7,7 @@
  */
 class functions{
     static function getNowTime(){
-        $date=date("Y-m-d h:i:s",time());
+        $date=date("Y-m-d H:i:s",time());
         return $date;
     }
 

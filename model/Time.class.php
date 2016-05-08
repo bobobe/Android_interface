@@ -19,8 +19,16 @@
         }
 
         function selectTimeByAddTime()
+        { 
+            $sql = sprintf("SELECT t.*,u.nick_name,u.img FROM time as t inner join users as u on u.uid = t.uid order by t.add_time desc");
+			return $this->link->query($sql);
+
+        }
+		
+		function selectTimeById($data)
         {
-            $sql = sprintf("SELECT * FROM time order by add_time desc");
+			$tid = $data['loveId'];
+            $sql = sprintf("SELECT * FROM time where tid = %d ",$tid);
 			return $this->link->query($sql);
 
         }

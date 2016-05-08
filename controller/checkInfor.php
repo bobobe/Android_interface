@@ -22,17 +22,17 @@ include_once("C:/xampp/htdocs/taoaixin_phone/andriodinterface/configs/system.con
 		    	$flag = 0;
 		    }
 			//返回的数据
-			$response['session_id'] = session_id();
+			$response_data['session_id'] = session_id();
 			if ($flag == 1)//成功
 			{
-				$response['flag'] = 1;
+				$response_data['flag'] = 1;
 			}
 			else if($flag == 0)//账号变更
 			{
-				$response['flag'] = 2;
+				$response_data['flag'] = 2;
 			}
 			
-		    echo json_encode($response);
+		    echo $response::json(200,"success",$response_data);
 		}
 		
 

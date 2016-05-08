@@ -14,36 +14,53 @@ include_once("C:/xampp/htdocs/taoaixin_phone/andriodinterface/configs/system.con
 		
         if($_POST['json'])
         {
-			$data['uid'] = $_POST['uid'];
-			$data['name'] = $_POST['name'];
-			$data['detail'] = $_POST['detail'];
-			
 			$shop = new Shop();
-			if($shop->selectShopByUid($data)->num == 0)//判断是否已开过店
-				return 2;
-			
-            
-			$file = new fileUpload();
-			$result = $file->uploadfile();
-			
-			$data['imgpath'] = $file->getfilepath();//图片路径
-			
-			
-			
-			if($shop->selectShopByUid($data)->num == 0)
+			$user = new Users();
+			$data['uid'] = $_POST['uid'];
+			if(!isset($_POST['name'])&&!isset($_POST['detail']))//首次进入判断是否开过店
 			{
-			    if($shop->addShop($data))
-			    {
-				    echo 1;
-			    }
-			    else
-			    {
-				    echo 0;
-			    }
+				$shop = new Shop();
+			    if($shop->selectShopByUid($data)->num == 1)//判断是否已开过店
+				{
+				   echo 2;
+				   return;
+				}
+				else
+				{
+					echo 1;
+					return ;
+				}
 			}
-			else{
-				return 2;
+			else//开店
+			{
+				$data['name'] = $_POST['name'];
+			    $data['detail'] = $_POST['detail'];
+            
+			    $file = new fileUpload();
+			    $result = $file->uploadfile();
+			
+			    $data['imgpath'] = $file->getfilepath();//图片路径
+			
+			
+			    if($shop->selectShopByUid($data)->num == 0)
+			    {
+			      if($shop->addShop($data))
+			      {
+					 $data['id'] = $_POST['uid'];
+					 $data['type'] = "shopflag";
+					 $data['catalog'] = 1;
+					 $user->updateUser($data);//更新是否开店标志
+					 
+				     echo 1;
+			      }
+			      else
+			      {
+				     echo 0;
+			      }
+			    }
+			   
 			}
+			
         }
 		
 

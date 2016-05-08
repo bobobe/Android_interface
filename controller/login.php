@@ -11,8 +11,6 @@ include_once("C:/xampp/htdocs/taoaixin_phone/andriodinterface/configs/system.con
 			$data['nick_name'] = $request['name'];
 			$data['password'] = $request['password'];
 			
-			
-
 
 			$user = new Users();
 
@@ -20,25 +18,28 @@ include_once("C:/xampp/htdocs/taoaixin_phone/andriodinterface/configs/system.con
 			
 		
 			//返回的数据
-			$response['session_id'] = session_id();
+			$response_data['session_id'] = session_id();
 			if ($flag == 1)//成功
 			{
-				$response['flag'] = 1;
+				$response_data['flag'] = 1;
 				$result = $user->selectUserByName($data);
-				$response['id'] = $result->results[0]['uid'];
-				$response['name'] = $result->results[0]['nick_name'];
-				$response['password'] = $result->results[0]['password'];
+				$response_data['id'] = $result->results[0]['uid'];
+				$response_data['name'] = $result->results[0]['nick_name'];
+				$response_data['password'] = $result->results[0]['password'];
+				$response_data['flagshop'] = $result->results[0]['is_setupshop'];
+				$response_data['imgpath'] = $result->results[0]['img'];
+				
 			}
 			else if($flag == 0)//不存在
 			{
-				$response['flag'] = 2;
+				$response_data['flag'] = 2;
 			}
 			else//密码错误
 			{
-				$response['flag'] = 3;
+				$response_data['flag'] = 3;
 			}
 			
-		    echo json_encode($response);
+		    echo $response::json(200,"success",$response_data);
 		}
 		
 		

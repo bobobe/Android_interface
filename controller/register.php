@@ -23,14 +23,14 @@ include_once("C:/xampp/htdocs/taoaixin_phone/andriodinterface/configs/system.con
 			{
 				if($user->addUser($data))//添加用户
 			    {
-				   $data['flag'] = 1;
+				   $response_data['flag'] = 1;
 			    }
 			}
 			else
 			{
-				$data['flag'] = 2;//已存在
+				$response_data['flag'] = 2;//已存在
 			}
-			echo json_encode($data);
+			echo $response::json(200,"success",$response_data);
 		}
 		
 

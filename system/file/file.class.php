@@ -18,8 +18,14 @@ class fileUpload {
 	function uploadfile()
 	{
 		$base_path = "C:/xampp/htdocs/taoaixin_phone/andriodinterface/customer_file/"; //接收文件目录  
-        $target_path = $base_path.date("YmdHis", time()) . rand(1000, 9999).basename ( $_FILES ['productImage'] ['name'] ); 
-        $this->filepath = $target_path;		
+		$http_base_path = "http://121.40.56.79/taoaixin_phone/andriodinterface/customer_file/";//返回数据的路径（http）
+		
+		$file_name = date("YmdHis", time()) . rand(1000, 9999).basename ( $_FILES ['productImage'] ['name'] );
+        
+		$target_path = $base_path.$file_name;//服务器保存文件总路径
+        $http_target_path = $http_base_path.$file_name;//返回http图片总路径
+		
+		$this->filepath = $http_target_path;		
         if (move_uploaded_file ( $_FILES ['productImage'] ['tmp_name'], $target_path )) {  
           $array = array ("code" => "1", "message" => $_FILES ['productImage'] ['name'] );  
           return 1;  //json_encode ( $array[$code] );  

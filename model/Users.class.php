@@ -12,10 +12,10 @@
             $password=$data['password'];
 			$role=$data['role'];
 			$sex=$data['sex'];
-            //$imgpath = $data['imgpath'];
+            $imgpath = "http://121.40.56.79/taoaixin_phone/andriodinterface/customer_file/default.jpg";//Ä¬ÈÏÍ·Ïñ
 			
             $date=functions::getNowTime();
-            $sql=sprintf("INSERT INTO users(nick_name,sex,role,password,add_time) VALUES('%s','%s','%s','%s','%s')",$nick_name,$sex,$role,$password,$date);
+            $sql=sprintf("INSERT INTO users(nick_name,sex,role,password,add_time,img) VALUES('%s','%s','%s','%s','%s','%s')",$nick_name,$sex,$role,$password,$date,$imgpath);
             return $this->link->query($sql);
         }
 
@@ -50,14 +50,15 @@
 				case "nick_name":
 				$sql=sprintf("UPDATE users SET nick_name='%s' where uid =%d",$data['catalog'],$id);
                 return $this->link->query($sql);
-				break;
 				case "phone":
 				$sql = sprintf("UPDATE users SET phone ='%s' where uid =%d",$data['catalog'],$id);
 				return $this->link->query($sql);
 				case "img":
 				$sql = sprintf("UPDATE users SET img ='%s' where uid =%d",$data['catalog'],$id);
 				return $this->link->query($sql);
-				break;
+				case "shopflag":
+				$sql = sprintf("UPDATE users SET is_setupshop = %d where uid =%d",$data['catalog'],$id);
+				return $this->link->query($sql);
 			}
 
         }

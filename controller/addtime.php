@@ -5,12 +5,10 @@ include_once("C:/xampp/htdocs/taoaixin_phone/andriodinterface/configs/system.con
 
         session_start();
 		
-        if($_POST['json'])
-		{
-			$request = json_decode($_POST["json"], true);//加上true是转化为数组，不加是转化为对象
-			$data['sta_time'] = $request['sta_time'];
-			$data['end_time'] = $request['end_time'];
-		    $data['uid'] = $request['uid'];
+			//$request = json_decode($_POST["json"], true);//加上true是转化为数组，不加是转化为对象
+			$data['sta_time'] = $_POST['staTime'];
+			$data['end_time'] = $_POST['endTime'];
+		    $data['uid'] = $_POST['userId'];
 			
 			$data['session_id'] = session_id();
 
@@ -30,7 +28,6 @@ include_once("C:/xampp/htdocs/taoaixin_phone/andriodinterface/configs/system.con
 
 			
 		    echo $response::json(200,"success",$response_data);;
-		}
 		
 		
 		

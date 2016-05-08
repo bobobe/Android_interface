@@ -8,7 +8,7 @@
 //json_decode( file_get_contents( "php://input" ), true );
 //echo $request_method;
 include_once("C:/xampp/htdocs/taoaixin_phone/andriodinterface/configs/system.config.php");
-$data = array(
+/*$data = array(
    "array1" => array(
       "1"=>"name",
 	  "2"=>"password"
@@ -17,13 +17,18 @@ $data = array(
       "3"=>"name",
 	  "4"=>"password"
 	  )
-	);
+	);*/
 	
-$data["flag"] = 1;
+/*$data["flag"] = 1;
 $data["array1"]["flag"] = 1;
-$data["array1"]["name"]["first_name"] = "xiaoming";
+$data["array1"]["name"]["first_name"] = "xiaoming";*/
 
 //$data['flag'] = 1;
+
+$data = array(
+   "array1" =>"jj",
+	"array2" => "kk"
+	);
 
 
 echo $response::json(200,"success",$data);

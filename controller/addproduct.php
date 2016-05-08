@@ -9,8 +9,10 @@ include_once("C:/xampp/htdocs/taoaixin_phone/andriodinterface/configs/system.con
 			$data['name'] = $_POST['productName'];//名字
 			$data['price'] = $_POST['productPrice'];//价格
 			$data['detail'] = $_POST['productDetail'];//描述
-			//$data['num'] = $_POST['num'];//数量
 		    $data['uid'] = (int)$_POST['userId'];//用户id
+			
+			$data['num'] = $_POST['productNum'];//数量
+			$data['type'] = $_POST['productClass'];//类别
 			
 			//$data['session_id'] = session_id();
             

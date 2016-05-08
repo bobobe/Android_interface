@@ -12,16 +12,26 @@
             $job_name=$data['job_name'];
             $time=$data['time'];
             $detail=$data['detail'];
-            //$imgpath = $data['imgpath'];
+			$place=$data['place'];
+			$uid = $data['uid'];
+            $imgpath = $data['imgpath'];
             $date=functions::getNowTime();
 
-            $sql=sprintf("INSERT INTO job(name,detail,add_time,time) VALUES('%s','%s','%s')",$job_name,$detail,$date,$time);
+            $sql=sprintf("INSERT INTO job(name,detail,add_time,place,uid,imgpath,time) VALUES('%s','%s','%s','%s',%d,'%s','%s')",$job_name,$detail,$date,$place,$uid,$imgpath,$time);
             return $this->link->query($sql);
         }
 
         function selectJobByAddTime()
         {
-            $sql = sprintf("SELECT * FROM job order by add_time desc");
+            $sql = sprintf("SELECT j.*,u.nick_name,u.img  FROM job as j inner join users as u on u.uid = j.uid order by j.add_time desc");
+			return $this->link->query($sql);
+
+        }
+		
+		function selectJobById($data)
+        {
+			$jid = $data['loveId'];
+            $sql = sprintf("SELECT * FROM job where jid = %d ",$jid);
 			return $this->link->query($sql);
 
         }

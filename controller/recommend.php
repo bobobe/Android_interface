@@ -1,13 +1,6 @@
 <?php
 		/*
-		参数
-		myfile -》File file = new File(path);
-		json格式：
-		键值：
-		id-》uid
-		type-》img
-
-		修改成功返回1，否则返回0
+        返回所有爱心数据,按时间排序
 		*/
 include_once("C:/xampp/htdocs/taoaixin_phone/andriodinterface/configs/system.config.php");
 
@@ -74,8 +67,7 @@ include_once("C:/xampp/htdocs/taoaixin_phone/andriodinterface/configs/system.con
 				
 				
 				echo $response::json(200,"success",$response_data);
-			//}
-		}
+           }
 		
 
 ?>
