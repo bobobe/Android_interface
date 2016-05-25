@@ -27,8 +27,16 @@
 		
 		function selectTimeById($data)
         {
-			$tid = $data['loveId'];
+			$tid = $data['id'];
             $sql = sprintf("SELECT * FROM time where tid = %d ",$tid);
+			return $this->link->query($sql);
+
+        }
+		
+		function selectTimeByUid($data)
+        {
+			$uid = $data['uid'];
+            $sql = sprintf("SELECT * FROM time where uid = %d order by add_time desc",$uid);
 			return $this->link->query($sql);
 
         }

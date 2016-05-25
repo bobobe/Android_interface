@@ -18,7 +18,7 @@ class fileUpload {
 	function uploadfile()
 	{
 		$base_path = "C:/xampp/htdocs/taoaixin_phone/andriodinterface/customer_file/"; //接收文件目录  
-		$http_base_path = "http://121.40.56.79/taoaixin_phone/andriodinterface/customer_file/";//返回数据的路径（http）
+		$http_base_path = "http://121.40.56.79:81/customer_file/";//返回数据的路径（http）
 		
 		$file_name = date("YmdHis", time()) . rand(1000, 9999).basename ( $_FILES ['productImage'] ['name'] );
         

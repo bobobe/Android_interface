@@ -13,24 +13,25 @@ include_once("C:/xampp/htdocs/taoaixin_phone/andriodinterface/configs/system.con
 			//{
 				//$file = new fileUpload();
 				$type = $_POST['type'];
-				
+				$data['uid'] = $_POST['uid'];
 				switch($type)
 				{
 					case'time':
 					$time = new Time();
-					$result = $time->selectTimeByAddTime();
+					$result = $time->selectTimeByUid($data);
 					break;
 					
 					case'job':
 					$job = new Job();
-					$result = $job->selectJobByAddTime();
+					$result = $job->selectJobByUid($data);
 					break;
 					
 					case'product':
 					$product = new Product();
-					$result = $product->selectProductByAddTime();
+					$result = $product->selectProductByUid($data);
 					break;
 				}
+				
 				
 				$data = $result->results;
 				

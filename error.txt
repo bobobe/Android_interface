@@ -31,3 +31,5 @@
 [08-May-2016 01:12:52 PRC] PHP Parse error:  syntax error, unexpected ':' in C:\xampp\htdocs\taoaixin_phone\andriodinterface\model\Users.class.php on line 15
 [08-May-2016 01:13:55 PRC] PHP Parse error:  syntax error, unexpected ':' in C:\xampp\htdocs\taoaixin_phone\andriodinterface\model\Users.class.php on line 15
 [08-May-2016 01:14:52 PRC] PHP Parse error:  syntax error, unexpected ':' in C:\xampp\htdocs\taoaixin_phone\andriodinterface\model\Users.class.php on line 15
+[15-May-2016 00:11:58 PRC] PHP Fatal error:  Cannot redeclare Time::selectTimeById() in C:\xampp\htdocs\taoaixin_phone\andriodinterface\model\Time.class.php on line 36
+[22-May-2016 10:06:12 PRC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\xampp\htdocs\taoaixin_phone\andriodinterface\controller\addproduct.php on line 2

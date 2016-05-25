@@ -14,17 +14,17 @@ include_once("C:/xampp/htdocs/taoaixin_phone/andriodinterface/configs/system.con
 				{
 					case'time':
 					$time = new Time();
-					$result = $time->selectTimeByAddTime($data);
+					$result = $time->selectTimeById($data);
 					break;
 					
 					case'job':
 					$job = new Job();
-					$result = $job->selectJobByAddTime($data);
+					$result = $job->selectJobById($data);
 					break;
 					
 					case'product':
 					$product = new Product();
-					$result = $product->selectProductByAddTime($data);
+					$result = $product->selectProductById($data);
 					break;
 				}
 			

@@ -30,8 +30,16 @@
 		
 		function selectJobById($data)
         {
-			$jid = $data['loveId'];
+			$jid = $data['id'];
             $sql = sprintf("SELECT * FROM job where jid = %d ",$jid);
+			return $this->link->query($sql);
+
+        }
+		
+		function selectJobByUid($data)
+        {
+			$uid = $data['uid'];
+            $sql = sprintf("SELECT * FROM job where uid = %d order by add_time desc",$uid);
 			return $this->link->query($sql);
 
         }

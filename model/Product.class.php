@@ -28,10 +28,18 @@
 			return $this->link->query($sql);
 		}
         
-		function selectJobById($data)
+		function selectProductById($data)
         {
-			$pid = $data['loveId'];
+			$pid = $data['id'];
             $sql = sprintf("SELECT * FROM product where pid = %d ",$pid);
+			return $this->link->query($sql);
+
+        }
+		
+		function selectProductByUid($data)
+        {
+			$uid = $data['uid'];
+            $sql = sprintf("SELECT * FROM product where uid = %d order by add_time desc",$uid);
 			return $this->link->query($sql);
 
         }

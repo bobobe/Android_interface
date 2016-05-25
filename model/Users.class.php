@@ -59,6 +59,9 @@
 				case "shopflag":
 				$sql = sprintf("UPDATE users SET is_setupshop = %d where uid =%d",$data['catalog'],$id);
 				return $this->link->query($sql);
+				case "verify":
+				$sql = sprintf("UPDATE users SET is_setupshop = %d,name = '%s',intro = '%s',idcard = '%s' where uid =%d",$data['is_setupshop'],$data['name'],$data['intro'],$data['idcard']);
+				return $this->link->query($sql);
 			}
 
         }

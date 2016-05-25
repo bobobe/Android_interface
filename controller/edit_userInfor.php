@@ -12,13 +12,21 @@ include_once("C:/xampp/htdocs/taoaixin_phone/andriodinterface/configs/system.con
 			$data['catalog'] = $request['catalog'];
 			$data['id'] = $request['id'];
 			$user = new Users();
+			
+			if($data['type'] = "img")
+			{
+				$file = new fileUpload();
+			    $result = $file->uploadfile();
+		        $data['catalog'] = $file->getfilepath();//图片路径
+			}
+			
 			if($user->updateUser($data))
 			{
-				$response['flag'] = 1;//修改成功
+				$response_data['flag'] = 1;//修改成功
 			}
 			else
 			{
-				$response['flag'] = 2;
+				$response_data['flag'] = 2;
 			}
 			
 			
@@ -26,7 +34,7 @@ include_once("C:/xampp/htdocs/taoaixin_phone/andriodinterface/configs/system.con
 						
 			//返回的数据
 			
-		    echo json_encode($response);
+		    echo $response::json(200,"success",$response_data);
 		}
 		
 
