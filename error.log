@@ -1,1 +1,14 @@
-﻿
+﻿[2017-05-19 22:35:55]错误级别是：E_NOTICE;在E:\xampp\htdocs\Android_interface\controller\fs_login.php第8行存在错误;错误信息是Undefined index: json。
+ 
+[2017-05-19 22:38:28]错误级别是：E_NOTICE;在E:\xampp\htdocs\Android_interface\controller\fs_login.php第8行存在错误;错误信息是Undefined index: json。
+ 
+[2017-05-19 23:36:01]错误级别是：E_WARNING;在E:\xampp\htdocs\Android_interface\system\mysqli\mysqli.class.php第18行存在错误;错误信息是mysqli::mysqli(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO)。
+ 
+[19-May-2017 23:36:01 PRC] PHP Fatal error:  Call to a member function close() on null in E:\xampp\htdocs\Android_interface\system\mysqli\mysqli.class.php on line 60
+[2017-05-19 23:36:47]错误级别是：E_WARNING;在E:\xampp\htdocs\Android_interface\model\Fusers.class.php第22行存在错误;错误信息是Illegal string offset 'name'。
+ 
+[2017-05-19 23:38:09]错误级别是：E_WARNING;在E:\xampp\htdocs\Android_interface\controller\fs_login.php第12行存在错误;错误信息是Illegal string offset 'name'。
+ 
+[2017-05-19 23:39:32]错误级别是：E_WARNING;在E:\xampp\htdocs\Android_interface\controller\fs_login.php第12行存在错误;错误信息是Illegal string offset 'name'。
+ 
+[20-May-2017 00:24:53 PRC] PHP Fatal error:  Call to undefined method Fusers::selectUserByName() in E:\xampp\htdocs\Android_interface\controller\fs_regis.php on line 18

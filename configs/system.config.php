@@ -1,7 +1,7 @@
 <?php
 
-define("DIR_APPLICATION","C:/xampp/htdocs/taoaixin_phone/andriodinterface");
-define("DIR_DB_CONFIG","C:/xampp/htdocs/taoaixin_phone/andriodinterface/configs/db.config.xml");
+define("DIR_APPLICATION","E:/xampp/htdocs/Android_interface");
+define("DIR_DB_CONFIG","E:/xampp/htdocs/Android_interface/configs/db.config.xml");
 
 include_once(DIR_APPLICATION."/system/functions/functions.class.php");
 include_once(DIR_APPLICATION."/system/xml_op/xpath.php");
@@ -14,6 +14,8 @@ include_once(DIR_APPLICATION."/model/Shop.class.php");
 include_once(DIR_APPLICATION."/model/Product.class.php");
 include_once(DIR_APPLICATION."/system/file/file.class.php");
 include_once(DIR_APPLICATION."/system/response/Response.class.php");
+
+include_once(DIR_APPLICATION."/model/FUsers.class.php");
 
 
 //修改错误处理

@@ -24,7 +24,6 @@
             $nick_name=$data['nick_name'];
             $sql=sprintf("SELECT * FROM users WHERE nick_name='%s'",$nick_name);
             return $this->link->query($sql);
-
         }
 
         function selectUserByUid($data)

@@ -46,8 +46,9 @@ class mysql_i{
 			       $query->free();
 			       return $result;
            }
-           else{
-           	return true;
+           else
+		   {
+				return true;
            }   
     }
 

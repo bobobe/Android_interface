@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <config>
+<!--
 	<db>
 		<ip>localhost</ip>
 		<user>root</user>
 		<password></password>
 		<port>3306</port>
 		<dbname>taoaixin</dbname>
+	</db>
+-->
+	<db>
+		<ip>localhost</ip>
+		<user>root</user>
+		<password>root</password>
+		<port>3306</port>
+		<dbname>p2pfileshare</dbname>
 	</db>
 
 	<memcache>
